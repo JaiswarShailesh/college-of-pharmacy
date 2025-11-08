@@ -7,7 +7,7 @@ import MessageFromPrincipal from "./PrincipalMessage";
 const page = () => {
   return (
     <>
-      <PageHero bannerImage="/images/page_banner.png" />
+      <PageHero bannerImage="/images/page_banner.png" pageTitle="About Us" />
       <AboutSVKM />
       <MessageFromPresident />
       <MessageFromPrincipal />
