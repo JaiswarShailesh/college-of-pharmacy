@@ -194,7 +194,7 @@ const FACULTY = [
     sr: 5,
     name: "Mrs. Kamini Patil",
     designation: "Assistant Professor",
-    photo: "/images/faculty/Kamini_Patil.jpg",
+    photo: "/images/faculty/Kamini_Patil_New.jpg",
 
     qualification: "M. Pharm",
     specialization: "Pharmaceutical Chemistry",

@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { Search, X } from "lucide-react";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import FACULTY from "../../data/faculty";
+import FACULTY from "../../../data/faculty";
 
 type FacultyItem = {
   sr: number;
@@ -73,7 +73,7 @@ export default function FacultyPage() {
       (f) =>
         String(f.sr).includes(term) ||
         f.name.toLowerCase().includes(term) ||
-        f.designation.toLowerCase().includes(term)
+        f.designation.toLowerCase().includes(term),
     );
   }, [q]);
 
@@ -163,13 +163,40 @@ export default function FacultyPage() {
 
             <div className="grid md:grid-cols-3 gap-6">
               {/* Left */}
-              <div className="text-center md:text-left flex flex-col items-center md:items-start">
-                <div className="w-36 h-36 rounded-full overflow-hidden mb-4 ring-4 ring-[#132347]/20">
+              {/* <div className="text-center md:text-left flex flex-col items-center md:items-start">
+                <div className="w-48 h-48 rounded-full overflow-hidden mb-4 ring-4 ring-[#132347]/20 shadow-md">
                   <Image
                     src={selected.photo || "/images/faculty/sample_profile.png"}
                     alt={selected.name}
-                    width={144}
-                    height={144}
+                    width={192}
+                    height={192}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+
+                <h2 className="text-2xl font-semibold text-[#132347]">
+                  {selected.name}
+                </h2>
+
+                <p className="text-gray-600 mt-1">{selected.designation}</p>
+
+                {selected.email && (
+                  <a
+                    href={`mailto:${selected.email}`}
+                    className="mt-2 text-sm text-[#132347] hover:underline"
+                  >
+                    {selected.email}
+                  </a>
+                )}
+              </div> */}
+
+              <div className="flex flex-col items-center text-center bg-gray-50 rounded-xl p-6">
+                <div className="w-48 h-48 rounded-full overflow-hidden mb-5 ring-4 ring-[#132347]/20 shadow-md">
+                  <Image
+                    src={selected.photo || "/images/faculty/sample_profile.png"}
+                    alt={selected.name}
+                    width={192}
+                    height={192}
                     className="object-cover w-full h-full"
                   />
                 </div>
@@ -209,22 +236,22 @@ export default function FacultyPage() {
 
                 <Detail
                   label="Publications"
-                  value={`Total: ${selected.publications?.total}, National: ${selected.publications?.national}, International: ${selected.publications?.international}`}
+                  value={`Total: ${selected.publications?.total || "NA"}, National: ${selected.publications?.national || "NA"}, International: ${selected.publications?.international || "NA"}`}
                 />
 
                 <Detail
                   label="Presentations"
-                  value={`Total: ${selected.presentations?.total}, Oral: ${selected.presentations?.oral}, Poster: ${selected.presentations?.poster}`}
+                  value={`Total: ${selected.presentations?.total || "NA"}, Oral: ${selected.presentations?.oral || "NA"}, Poster: ${selected.presentations?.poster || "NA"}`}
                 />
 
                 <Detail
                   label="Books & Chapters"
-                  value={`Books: ${selected.books?.books}, Chapters: ${selected.books?.chapters}`}
+                  value={`Books: ${selected.books?.books || "NA"}, Chapters: ${selected.books?.chapters || "NA"}`}
                 />
 
                 <Detail
                   label="Students Guided"
-                  value={`PhD: ${selected.guidance?.phd}, M.Pharm: ${selected.guidance?.mpharm}, B.Pharm: ${selected.guidance?.bpharm}`}
+                  value={`PhD: ${selected.guidance?.phd || "NA"}, M.Pharm: ${selected.guidance?.mpharm || "NA"}, B.Pharm: ${selected.guidance?.bpharm || "NA"}`}
                 />
 
                 <hr className="my-4 border-gray-200" />

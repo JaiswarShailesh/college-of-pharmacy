@@ -106,6 +106,15 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <a
+                  href="https://fa-elxu-saasfaprod1.fa.ocs.oraclecloud.com:443/hcmUI/CandidateExperience/en/sites/CX_10001"
+                  className="hover:text-yellow-500 transition"
+                  target="_blank"
+                >
+                  Careers
+                </a>
+              </li>
+              <li>
                 <Link
                   href="/contact"
                   className="hover:text-yellow-500 transition"
@@ -155,9 +164,12 @@ export default function Footer() {
             <Link href="#" className="hover:text-yellow-500 transition">
               <Linkedin size={18} />
             </Link>
-            <Link href="#" className="hover:text-yellow-500 transition">
+            <a
+              href="https://www.youtube.com/@SVKMCollegeofPharmacyShirpur" target="_blank"
+              className="hover:text-yellow-500 transition"
+            >
               <Youtube size={18} />
-            </Link>
+            </a>
           </div>
 
           {/* Copyright */}

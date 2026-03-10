@@ -56,9 +56,16 @@ const NAV = [
       { name: "Academic Calendar", href: "/academics/calendar" },
       { name: "Syllabus", href: "/academics/syllabus" },
       { name: "Time Table", href: "/academics/timetable" },
+      { name: "Examination", href: "/academics/examination" },
     ],
   },
-  { name: "Faculty", href: "/faculty" },
+  {
+    name: "Faculty",
+    children: [
+      { name: "Teaching", href: "/faculty/teaching" },
+      { name: "Non Teaching", href: "/faculty/non-teaching" },
+    ],
+  },
   { name: "Research", href: "/research" },
   { name: "Library", href: "/library" },
   { name: "News & Bulletin", href: "/news" },
@@ -147,13 +154,15 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               {/* Replace /logo.png with your real logo in /public */}
               <div className="flex items-center gap-3">
-                <Image
-                  src="/images/cop_logo.png"
-                  alt="SVKM logo"
-                  width={300}
-                  height={80}
-                  className="object-contain"
-                />
+                <Link href={"/"}>
+                  <Image
+                    src="/images/cop_logo.png"
+                    alt="SVKM logo"
+                    width={300}
+                    height={80}
+                    className="object-contain"
+                  />
+                </Link>
                 {/* <div>
                   <h2 className="text-lg font-semibold text-slate-800">
                     SVKM’s College of Pharmacy
@@ -165,13 +174,26 @@ export default function Navbar() {
             {/* Right: CTA buttons (UGC, Apply Now, Download Prospectus) */}
             <div className="flex items-center gap-4">
               <div className="hidden sm:flex items-center gap-4 text-xs text-slate-700">
-                <Link href={"/faculty"} className="hover:underline">Faculty</Link>
+                <Link href={"/faculty"} className="hover:underline">
+                  Faculty
+                </Link>
                 <span className="text-slate-300">|</span>
-                <Link href={"/alumni"} className="hover:underline">Alumni</Link>
+                <Link href={"/alumni"} className="hover:underline">
+                  Alumni
+                </Link>
                 <span className="text-slate-300">|</span>
-                <Link href={"/careers"} className="hover:underline">Careers</Link>
+                <a
+                  href="https://fa-elxu-saasfaprod1.fa.ocs.oraclecloud.com:443/hcmUI/CandidateExperience/en/sites/CX_10001"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  Careers
+                </a>
                 <span className="text-slate-300">|</span>
-                <Link href={"/contact"} className="hover:underline">Contact</Link>
+                <Link href={"/contact"} className="hover:underline">
+                  Contact
+                </Link>
               </div>
 
               <div className="flex items-center gap-3">
@@ -204,9 +226,10 @@ export default function Navbar() {
                   <Instagram size={14} />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@SVKMCollegeofPharmacyShirpur"
                   aria-label="youtube"
                   className="text-slate-600 hover:text-amber-500"
+                  target="_blank"
                 >
                   <Youtube size={14} />
                 </a>
