@@ -33,7 +33,7 @@ const STAFF = [
   },
   {
     sr: 7,
-    name: "Mrs. Vishakha Puri",
+    name: "Mrs. Vishakha Gosavi",
     designation: "Lab Technician",
   },
   {

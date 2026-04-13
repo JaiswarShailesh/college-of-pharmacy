@@ -14,18 +14,24 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     id: 1,
-    img: "/images/carousel/slider_1.png",
+    img: "/images/carousel/slider_5.jpg",
     title: "Welcome to SVKM’s College of Pharmacy",
     desc: "Empowering the next generation of healthcare innovators.",
   },
   {
     id: 2,
+    img: "/images/carousel/slider_6.jpg",
+    title: "Welcome to SVKM’s College of Pharmacy",
+    desc: "Empowering the next generation of healthcare innovators.",
+  },
+  {
+    id: 3,
     img: "/images/carousel/slider_4.png",
     title: "World-Class Infrastructure",
     desc: "State-of-the-art laboratories and modern learning spaces.",
   },
   {
-    id: 3,
+    id: 4,
     img: "/images/carousel/slider_3.png",
     title: "Academic Excellence",
     desc: "Committed to quality education and impactful research.",

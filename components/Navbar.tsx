@@ -157,7 +157,7 @@ export default function Navbar() {
                 <Link href={"/"}>
                   <Image
                     src="/images/cop_logo.png"
-                    alt="SVKM logo"
+                    alt="SVKM's College of Pharmacy"
                     width={300}
                     height={80}
                     className="object-contain"
@@ -174,7 +174,7 @@ export default function Navbar() {
             {/* Right: CTA buttons (UGC, Apply Now, Download Prospectus) */}
             <div className="flex items-center gap-4">
               <div className="hidden sm:flex items-center gap-4 text-xs text-slate-700">
-                <Link href={"/faculty"} className="hover:underline">
+                <Link href={"/faculty/teaching"} className="hover:underline">
                   Faculty
                 </Link>
                 <span className="text-slate-300">|</span>

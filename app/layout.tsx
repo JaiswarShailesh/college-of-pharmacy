@@ -50,7 +50,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <PagePopup />
+        {/* <PagePopup /> */}
       </body>
     </html>
   );

@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/faculty"
+                  href="/faculty/teaching"
                   className="hover:text-yellow-500 transition"
                 >
                   Faculty
