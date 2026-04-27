@@ -57,6 +57,7 @@ const NAV = [
       { name: "Syllabus", href: "/academics/syllabus" },
       { name: "Time Table", href: "/academics/timetable" },
       { name: "Examination", href: "/academics/examination" },
+      { name: "Student Council", href: "/academics/student-council" },
     ],
   },
   {
