@@ -11,6 +11,14 @@ export const metadata: Metadata = {
 
 const newsData = [
   {
+    title: "Industrial Visit by SVKM's College of Pharmacy Students",
+    description:
+      "Students of SVKM's College of Pharmacy, Shirpur participated in an industrial visit to gain practical exposure to pharmaceutical manufacturing, packaging, and quality control processes.",
+    pdf: "/docs/news/industrial_report_06052026.pdf",
+    image: "/images/news/industrial_report_06052026.jpeg",
+    date: "06 May 2026",
+  },
+  {
     title:
       "Students Serving first-aid service at Nageshwar temple on the auspicious occasion of Mahashivratri",
     description:
@@ -81,7 +89,7 @@ const newsData = [
 export default function Page() {
   // Sort news by newest date
   const sortedNews = [...newsData].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
   return (
