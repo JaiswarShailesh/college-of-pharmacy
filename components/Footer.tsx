@@ -161,9 +161,9 @@ export default function Footer() {
             <Link href="#" className="hover:text-yellow-500 transition">
               <Instagram size={18} />
             </Link>
-            <Link href="#" className="hover:text-yellow-500 transition">
+            {/* <Link href="#" className="hover:text-yellow-500 transition">
               <Linkedin size={18} />
-            </Link>
+            </Link> */}
             <a
               href="https://www.youtube.com/@SVKMCollegeofPharmacyShirpur" target="_blank"
               className="hover:text-yellow-500 transition"
