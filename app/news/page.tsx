@@ -11,6 +11,15 @@ export const metadata: Metadata = {
 
 const newsData = [
   {
+    title:
+      "SVKM's College of Pharmacy Students Selected for National E-Yuva Fellowship",
+    description:
+      "Students of SVKM's College of Pharmacy, Shirpur achieved national recognition through the prestigious E-Yuva Fellowship program. Their research project focuses on developing a novel biodegradable film using ginger and pteridoxime extracts for market-ready nutraceutical applications, showcasing innovation and research excellence.",
+    pdf: "/images/news/paper_news-EYuva_29052026.jpeg",
+    image: "/images/news/paper_news-EYuva_29052026.jpeg",
+    date: "16 May 2026",
+  },
+  {
     title: "Industrial Visit by SVKM's College of Pharmacy Students",
     description:
       "Students of SVKM's College of Pharmacy, Shirpur participated in an industrial visit to gain practical exposure to pharmaceutical manufacturing, packaging, and quality control processes.",
@@ -114,6 +123,9 @@ export default function Page() {
                     src={news.image}
                     alt={news.title}
                     fill
+                    sizes="(max-width: 768px) 100vw,
+                    (max-width: 1024px) 50vw,
+                    33vw"
                     className="object-cover group-hover:scale-105 transition duration-300"
                   />
 

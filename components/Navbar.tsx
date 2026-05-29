@@ -68,7 +68,19 @@ const NAV = [
     ],
   },
   { name: "Research", href: "/research" },
-  { name: "Library", href: "/library" },
+  // { name: "Library", href: "/library" },
+  {
+    name: "Library",
+    children: [
+      { name: "Overview", href: "/library" },
+      { name: "Rules & Regulations", href: "/library/rules-and-regulations" },
+      { name: "Digital Resource & Online Services", href: "/library/digital-resource-and-online-services" },
+      { name: "Academic Support Services", href: "/library/accademic-support-services" },
+      { name: "Gallery & Learning Spaces", href: "/library/gallery-and-learning-spaces" },
+      { name: "Remote Access & Smart Services", href: "/library/remote-access-and-smart-services" },
+      { name: "Open E-Resources", href: "/library/open-e-resources" },
+    ],
+  },
   { name: "News & Bulletin", href: "/news" },
   { name: "Contact", href: "/contact" },
 ];
@@ -162,6 +174,7 @@ export default function Navbar() {
                     width={300}
                     height={80}
                     className="object-contain"
+                    priority
                   />
                 </Link>
                 {/* <div>
