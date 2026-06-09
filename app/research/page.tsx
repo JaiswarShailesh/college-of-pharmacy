@@ -10,6 +10,7 @@ import {
   Calendar,
   Building,
   ArrowUpRight,
+  ClipboardList,
 } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -50,11 +51,21 @@ export default function ResearchGrantShowcasePage() {
 
             {/* Quick Context Intro Card */}
             <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-              In a continuous testament to academic rigor and scientific
-              enterprise, the institutional research ecosystem has reached a
-              prestigious new paradigm. This competitive grant allocation
-              targets translational research models, fostering real-world
-              development in therapeutic sciences.
+              Shri Vile Parle Kelavani Mandal’s College of Pharmacy, Shirpur,
+              Tardi, secures the prestigious BIRAC E-YUVA Fellowship under the
+              3rd National Call for the project “Development of Novel Ginger
+              Pyridoxine Buccal Films for Nausea Management: A Market-Ready
+              Nutraceutical Innovation,” under the mentorship of Dr. Krishna
+              Swaroop Akey, with research grant and fellowship support of
+              approximately ₹4 lakh.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-base md:text-lg">
+              SVKM's College of Pharmacy, Shirpur, fosters a vibrant research
+              ecosystem that encourages innovation, scientific inquiry, and
+              translational outcomes. Through funded research projects,
+              publications, patents, and student-led innovations, the institute
+              continuously contributes to the advancement of pharmaceutical
+              sciences and healthcare technologies.
             </p>
 
             {/* Quantitative Milestone Highlights Grid */}
@@ -84,7 +95,7 @@ export default function ResearchGrantShowcasePage() {
                     Endowment
                   </span>
                   <span className="text-xl font-black text-[#132347] mt-1 block">
-                    ₹4,000,000/-
+                    ₹4,00,000/-
                   </span>
                 </div>
               </div>
@@ -154,17 +165,73 @@ export default function ResearchGrantShowcasePage() {
                 ))}
               </div>
             </div>
+
+            {/* Comprehensive Project Details Table */}
+            <div className="bg-white border border-gray-200/80 rounded-3xl p-6 shadow-xs space-y-4 overflow-hidden">
+              <h3 className="text-lg font-bold text-[#132347] tracking-tight border-b border-gray-100 pb-3 flex items-center gap-2">
+                <ClipboardList className="w-5 h-5 text-[#146e8a]" /> Official Consolidated Particulars
+              </h3>
+              <div className="overflow-x-auto rounded-xl border border-gray-100">
+                <table className="w-full text-left border-collapse text-sm">
+                  <thead>
+                    <tr className="bg-gray-50 text-[#132347] border-b border-gray-100">
+                      <th className="p-4 font-bold tracking-wide w-1/3">Particulars</th>
+                      <th className="p-4 font-bold tracking-wide w-2/3">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100 text-gray-600">
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Project Title</td>
+                      <td className="p-4 leading-relaxed font-medium">
+                        Development of Novel Ginger Pyridoxine Buccal Films for Nausea Management: A Market-Ready Nutraceutical Innovation
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Funding Programme</td>
+                      <td className="p-4 leading-relaxed">
+                        E-YUVA Fellowship Scheme (Encouraging Youth for Undertaking Innovative Research as Venture Advancement)
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Funding Agency</td>
+                      <td className="p-4 font-semibold text-gray-700">
+                        Biotechnology Industry Research Assistance Council (BIRAC), Government of India
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Grant Support</td>
+                      <td className="p-4 font-medium text-emerald-700">
+                        ₹4,00,000 Annual Research Grant and Fellowship Support for 5 E-YUVA Fellows
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Host Centre</td>
+                      <td className="p-4">E-YUVA Centre, Central University of Punjab</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Principal Investigator</td>
+                      <td className="p-4 font-medium">
+                        Dr. Krishna Swaroop Akey, Assistant Professor, Department of Pharmaceutical Chemistry, SVKM&apos;s College of Pharmacy, Shirpur
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Student Innovators</td>
+                      <td className="p-4 text-gray-700 font-medium">
+                        Ms. Riva Rakesh Parmar, Ms. Mrunali Pawar, Mr. Sahil Vijay Yadav, Mr. Aavesh Isa Girase, Mr. Rehan Muktar Girase
+                      </td>
+                    </tr>
+                    <tr className="hover:bg-gray-50/50 transition-colors">
+                      <td className="p-4 font-semibold text-[#132347] bg-gray-50/30">Project Duration</td>
+                      <td className="p-4">12 Months</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
 
           {/* Right Column: Visual Media Showcase & Flyer Block (5 Columns) */}
           <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-24">
-            {/* Visual Media Header Indicator */}
-            {/* <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-              <h4 className="text-sm font-extrabold text-[#132347] tracking-tight uppercase tracking-wider flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-[#146e8a]" /> Congratulations
-              </h4>
-            </div> */}
-
             {/* Interactive Image Frame */}
             <div className="bg-white border border-gray-200 rounded-3xl p-4 shadow-sm group hover:shadow-md transition-all duration-300">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-gray-50 border border-gray-100 shadow-inner">

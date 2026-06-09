@@ -3,18 +3,18 @@ import PageHero from "@/components/PageHero";
 const STAFF = [
   {
     sr: 1,
+    name: "Mr. Jijabrao Patil",
+    designation: "Librarian",
+  },
+  {
+    sr: 2,
     name: "Mr. Dhanraj Marathe",
     designation: "Admin Clerk",
   },
   {
-    sr: 2,
-    name: "Mr. Sagar Bari",
-    designation: "Accounts",
-  },
-  {
     sr: 3,
-    name: "Mr. Hemant Bawa",
-    designation: "Librarian",
+    name: "Mr. Sagar Bari",
+    designation: "Accountant",
   },
   {
     sr: 4,
@@ -24,7 +24,7 @@ const STAFF = [
   {
     sr: 5,
     name: "Mr. Prashant Gurav",
-    designation: "Purchase Department",
+    designation: "Purchase Department in-charge",
   },
   {
     sr: 6,
@@ -33,11 +33,16 @@ const STAFF = [
   },
   {
     sr: 7,
-    name: "Mrs. Vishakha Gosavi",
+    name: "Mr. Hemant Bawa",
     designation: "Lab Technician",
   },
   {
     sr: 8,
+    name: "Mrs. Vishakha Gosavi",
+    designation: "Lab Technician",
+  },
+  {
+    sr: 9,
     name: "Mr. Salman Pinjari",
     designation: "IT Technician",
   },
