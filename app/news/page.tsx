@@ -12,6 +12,26 @@ export const metadata: Metadata = {
 const newsData = [
   {
     title:
+      "World Environment Day – No Fire Cooking Challenge Featured in Lokmat",
+    description:
+      "SVKM's College of Pharmacy, Shirpur organized a 'No Fire Cooking Challenge' on the occasion of World Environment Day to create awareness about environmental conservation. More than 50 students participated enthusiastically and presented innovative, nutritious, and eco-friendly dishes prepared without using gas or electricity. The event was covered by Lokmat newspaper.",
+    pdf: "/images/news/world_environment_day_lokmat.jpg",
+    image: "/images/news/world_environment_day_lokmat.jpg",
+    date: "10 June 2026",
+    isLatest: true,
+  },
+  {
+    title:
+      "World Environment Day – No Fire Cooking Challenge Featured in Punya Nagari",
+    description:
+      "SVKM's College of Pharmacy, Shirpur successfully conducted a 'No Fire Cooking Challenge' on World Environment Day to promote sustainable and eco-friendly practices among students. The competition encouraged healthy food preparation without using conventional energy sources and received coverage in Punya Nagari newspaper.",
+    pdf: "/images/news/world_environment_day_punyaNagari.jpg",
+    image: "/images/news/world_environment_day_punyaNagari.jpg",
+    date: "10 June 2026",
+    isLatest: true,
+  },
+  {
+    title:
       "SVKM's College of Pharmacy Students Selected for National E-Yuva Fellowship",
     description:
       "Students of SVKM's College of Pharmacy, Shirpur achieved national recognition through the prestigious E-Yuva Fellowship program. Their research project focuses on developing a novel biodegradable film using ginger and pteridoxime extracts for market-ready nutraceutical applications, showcasing innovation and research excellence.",
@@ -130,7 +150,7 @@ export default function Page() {
                   />
 
                   {/* Latest badge */}
-                  {index === 0 && (
+                  {news.isLatest && (
                     <span className="absolute top-3 left-3 bg-red-500 text-white text-xs px-2 py-1 rounded-md">
                       Latest
                     </span>
