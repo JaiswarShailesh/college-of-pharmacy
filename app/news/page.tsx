@@ -11,6 +11,25 @@ export const metadata: Metadata = {
 
 const newsData = [
   {
+    title: "International Yoga Day Celebration Featured in Punya Nagari",
+    description:
+      "SVKM's College of Pharmacy, Shirpur celebrated International Yoga Day with enthusiastic participation from students and faculty members. The session included various yoga asanas, pranayama, meditation, and breathing exercises aimed at promoting physical fitness, mental well-being, and a healthy lifestyle. The event highlighted the importance of incorporating yoga into daily life and was featured in Punya Nagari newspaper.",
+    pdf: "/images/news/yoga_day_18072026.jpeg",
+    image: "/images/news/yoga_day_18072026.jpeg",
+    date: "25 June 2026",
+    isLatest: true,
+  },
+  {
+    title:
+      "Cultural Festival and Prize Distribution Ceremony Featured in Punya Nagari",
+    description:
+      "SVKM's College of Pharmacy, Shirpur organized its Annual Cultural Festival and Prize Distribution Ceremony with great enthusiasm. Students showcased their talents through cultural performances, Bollywood-themed events, and various competitions, demonstrating creativity, teamwork, and confidence. Outstanding performers were felicitated during the ceremony, and the event was featured in Punya Nagari newspaper.",
+    pdf: "/images/news/cultural_day_18072026.jpeg",
+    image: "/images/news/cultural_day_18072026.jpeg",
+    date: "23 June 2026",
+    isLatest: true,
+  },
+  {
     title:
       "World Environment Day – No Fire Cooking Challenge Featured in Lokmat",
     description:
@@ -18,7 +37,7 @@ const newsData = [
     pdf: "/images/news/world_environment_day_lokmat.jpg",
     image: "/images/news/world_environment_day_lokmat.jpg",
     date: "10 June 2026",
-    isLatest: true,
+    // isLatest: true,
   },
   {
     title:
@@ -28,7 +47,7 @@ const newsData = [
     pdf: "/images/news/world_environment_day_punyaNagari.jpg",
     image: "/images/news/world_environment_day_punyaNagari.jpg",
     date: "10 June 2026",
-    isLatest: true,
+    // isLatest: true,
   },
   {
     title:
