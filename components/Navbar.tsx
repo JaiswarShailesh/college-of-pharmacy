@@ -67,6 +67,10 @@ const NAV = [
       { name: "Non Teaching", href: "/faculty/non-teaching" },
     ],
   },
+  {
+    name: "Recruitment",
+    href: "/recruitment",
+  },
   { name: "Research", href: "/research" },
   // { name: "Library", href: "/library" },
   {
@@ -74,10 +78,22 @@ const NAV = [
     children: [
       { name: "Overview", href: "/library" },
       { name: "Rules & Regulations", href: "/library/rules-and-regulations" },
-      { name: "Digital Resource & Online Services", href: "/library/digital-resource-and-online-services" },
-      { name: "Academic Support Services", href: "/library/accademic-support-services" },
-      { name: "Gallery & Learning Spaces", href: "/library/gallery-and-learning-spaces" },
-      { name: "Remote Access & Smart Services", href: "/library/remote-access-and-smart-services" },
+      {
+        name: "Digital Resource & Online Services",
+        href: "/library/digital-resource-and-online-services",
+      },
+      {
+        name: "Academic Support Services",
+        href: "/library/accademic-support-services",
+      },
+      {
+        name: "Gallery & Learning Spaces",
+        href: "/library/gallery-and-learning-spaces",
+      },
+      {
+        name: "Remote Access & Smart Services",
+        href: "/library/remote-access-and-smart-services",
+      },
       { name: "Open E-Resources", href: "/library/open-e-resources" },
     ],
   },
