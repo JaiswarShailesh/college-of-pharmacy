@@ -44,6 +44,7 @@ const NAV = [
       { name: "Admission Approvals", href: "/admission/approvals" },
       { name: "Courses Offered", href: "/admission/BPharmacy" },
       { name: "B. Pharmacy", href: "/admission/BPharmacy" },
+      { name: "Fee Strucutre", href: "/images/fees_structure.png" },
       { name: "Online Fees Payment", href: "/admission/online-fees-payment" },
       { name: "Rules and Discipline", href: "/admission/rules-and-discipline" },
       { name: "Admission Enquiry", href: "/admission/admission-enquiry" },

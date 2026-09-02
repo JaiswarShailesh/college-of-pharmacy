@@ -1,13 +1,9 @@
-import PageHero from "@/components/PageHero";
-import { ArrowUpRight } from "lucide-react";
-import type { Metadata } from "next";
-import Image from "next/image";
+"use client";
 
-export const metadata: Metadata = {
-  title: "News and Bulletins",
-  description:
-    "Read the latest announcements, notices, and event highlights from SVKM's College of Pharmacy, Shirpur.",
-};
+import PageHero from "@/components/PageHero";
+import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 const newsData = [
   {
@@ -17,7 +13,6 @@ const newsData = [
     pdf: "/images/news/yoga_day_18072026.jpeg",
     image: "/images/news/yoga_day_18072026.jpeg",
     date: "25 June 2026",
-    isLatest: true,
   },
   {
     title:
@@ -27,7 +22,6 @@ const newsData = [
     pdf: "/images/news/cultural_day_18072026.jpeg",
     image: "/images/news/cultural_day_18072026.jpeg",
     date: "23 June 2026",
-    isLatest: true,
   },
   {
     title:
@@ -37,7 +31,6 @@ const newsData = [
     pdf: "/images/news/world_environment_day_lokmat.jpg",
     image: "/images/news/world_environment_day_lokmat.jpg",
     date: "10 June 2026",
-    // isLatest: true,
   },
   {
     title:
@@ -47,7 +40,6 @@ const newsData = [
     pdf: "/images/news/world_environment_day_punyaNagari.jpg",
     image: "/images/news/world_environment_day_punyaNagari.jpg",
     date: "10 June 2026",
-    // isLatest: true,
   },
   {
     title:
@@ -132,13 +124,47 @@ const newsData = [
     image: "/images/news/national_pharmacy_week.jpg",
     date: "22 November 2025",
   },
+  {
+    title: "College of Pharmacy Celebrates Librarian Day",
+    description:
+      "SVKM's College of Pharmacy and College of Agriculture, Tardi, jointly celebrated Librarian Day to mark the birth anniversary of Dr. S.R. Ranganathan. Principal Dr. Vivekkumar Redasani spoke on the importance of libraries and the need to maintain reading habits in the digital age. The college also introduced a QR-code based system to help students easily access the library's educational and digital resources. The event was featured in Punya Nagari newspaper.",
+    pdf: "/images/news/librarian_day_15082026.jpg",
+    image: "/images/news/librarian_day_15082026.jpg",
+    date: "15 August 2026",
+  },
+  {
+    title: "National Sports Day Celebrated with Enthusiasm",
+    description:
+      "SVKM's College of Pharmacy, Tardi, celebrated National Sports Day with great enthusiasm through various sports and fitness activities. Students participated actively, inspired by the life and sporting achievements of Major Dhyan Chand. Director of Physical Education Kuldeep Yadav guided the students, and Principal Dr. Vivekkumar Redasani extended his wishes on the occasion. The event was featured in Punya Nagari newspaper (Dhule edition).",
+    pdf: "/images/news/sports_day_02092026.jpg",
+    image: "/images/news/sports_day_02092026.jpg",
+    date: "02 September 2026",
+    isLatest: true,
+  },
 ];
 
+const ITEMS_PER_PAGE = 9;
+
 export default function Page() {
+  const [currentPage, setCurrentPage] = useState(1);
+
   // Sort news by newest date
   const sortedNews = [...newsData].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
+
+  const totalPages = Math.ceil(sortedNews.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedNews = sortedNews.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE,
+  );
+
+  const goToPage = (page: number) => {
+    if (page < 1 || page > totalPages) return;
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -151,9 +177,9 @@ export default function Page() {
       <section className="bg-gray-50 py-14">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedNews.map((news, index) => (
+            {paginatedNews.map((news, index) => (
               <div
-                key={index}
+                key={startIndex + index}
                 className="group bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden flex flex-col"
               >
                 {/* Image */}
@@ -205,6 +231,45 @@ export default function Page() {
               </div>
             ))}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-12">
+              <button
+                onClick={() => goToPage(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="flex items-center justify-center h-9 w-9 rounded-md border border-gray-200 bg-white text-gray-600 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 transition"
+                aria-label="Previous page"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                (page) => (
+                  <button
+                    key={page}
+                    onClick={() => goToPage(page)}
+                    className={`h-9 w-9 rounded-md text-sm font-medium transition ${
+                      page === currentPage
+                        ? "bg-sky-900 text-white"
+                        : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-100"
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ),
+              )}
+
+              <button
+                onClick={() => goToPage(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="flex items-center justify-center h-9 w-9 rounded-md border border-gray-200 bg-white text-gray-600 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-gray-100 transition"
+                aria-label="Next page"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </>
